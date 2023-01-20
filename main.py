@@ -1,9 +1,7 @@
 import pandas as pd
-
 from tkinter import *
 import tkinter as tk
 from PIL import Image, ImageTk
-
 
 fore = "white"
 back = "black"
@@ -97,6 +95,8 @@ with open('socialmedia.csv', 'r') as csvfile:
     for row in lines:
         x2.append(row[0])
         y2.append(int(row[1]))
+plt.xlabel('')
+plt.ylabel('')
 plt.pie(y2, labels=x2, autopct='%.2f%%')
 plt.title('Social Media Usage Report', fontsize=14)
 plt.savefig("pie.png", format="png")
